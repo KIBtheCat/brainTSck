@@ -1,0 +1,30 @@
+{
+  "name": "braintsck",
+  "version": "0.0.0",
+  "description": "Brainfuck interpreter in TypeScript",
+  "keywords": [
+    "typescript",
+    "javascript",
+    "brain",
+    "brainfuck",
+    "brainoof"
+  ],
+  "homepage": "https://github.com/benja2998/brainTSck#readme",
+  "bugs": {
+    "url": "https://github.com/benja2998/brainTSck/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benja2998/brainTSck.git"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": "benja2998",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests yet\""
+  },
+  "dependencies": {
+    "tsc": "^2.0.4"
+  }
+}
