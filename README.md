@@ -11,6 +11,13 @@ Install with npm:
 npm install -g braintsck
 ```
 
+You can also manually compile the source code:
+```bash
+git clone https://github.com/benja2998/brainTSck.git
+cd brainTSck
+npm run build
+```
+
 ## Usage
 
 brainTSck takes a brainfuck file as input and outputs a JavaScript file.

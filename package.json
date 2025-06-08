@@ -22,15 +22,18 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No tests yet\""
+    "test": "echo \"No tests yet\"",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "bin": {
-    "braintsck": "./index.js"
+    "braintsck": "dist/index.js"
   },
   "dependencies": {
     "tsc": "^2.0.4"
   },
   "devDependencies": {
-    "@types/node": "^22.15.30"
+    "@types/node": "^22.15.30",
+    "typescript": "^5.8.3"
   }
 }
