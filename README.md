@@ -8,7 +8,7 @@ With this package, you can write node.js programs in brainfuck, the absolute bes
 
 Install with npm:
 ```bash
-npm install -g brainTSck
+npm install -g braintsck
 ```
 
 ## Usage
