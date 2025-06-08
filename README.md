@@ -17,14 +17,14 @@ brainTSck takes a brainfuck file as input and outputs a JavaScript file.
 
 You can try the hello.bf file provided in the repository:
 ```bash
-brainTSck hello.bf
+braintsck hello.bf
 ```
 
 ## Writing a package
 
 You can make a brainfuck file called index.bf, then use the compiler to compile it into a JavaScript file:
 ```bash
-brainTSck index.bf
+braintsck index.bf
 ```
 
 ## Why use this
