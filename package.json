@@ -1,7 +1,7 @@
 {
-  "name": "braintsck",
+  "name": "brainTSck",
   "version": "0.0.0",
-  "description": "Brainfuck interpreter in TypeScript",
+  "description": "Brainfuck to JavaScript compiler in TypeScript",
   "keywords": [
     "typescript",
     "javascript",
@@ -26,5 +26,8 @@
   },
   "dependencies": {
     "tsc": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30"
   }
 }
