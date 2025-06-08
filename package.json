@@ -24,6 +24,9 @@
   "scripts": {
     "test": "echo \"No tests yet\""
   },
+  "bin": {
+    "braintsck": "./index.js"
+  },
   "dependencies": {
     "tsc": "^2.0.4"
   },
