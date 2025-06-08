@@ -11,11 +11,19 @@ Install with npm:
 npm install -g braintsck
 ```
 
-You can also manually compile the source code:
+### Manual installation
+
+Clone the repository:
 ```bash
 git clone https://github.com/benja2998/brainTSck.git
-cd brainTSck
+```
+Compile to JavaScript:
+```bash
 npm run build
+```
+Run it:
+```bash
+node dist/index.js
 ```
 
 ## Usage
