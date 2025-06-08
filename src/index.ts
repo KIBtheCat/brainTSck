@@ -33,7 +33,8 @@ if (!fs.existsSync(file)) {
 const contents = fs.readFileSync(file, 'utf8');
 let compiledContents = "";
 
-compiledContents = `
+compiledContents = `#!/usr/bin/env node
+
 const TAPE_SIZE = 30000;
 const tape = new Uint8Array(TAPE_SIZE);
 let pointer = 0;
@@ -49,25 +50,19 @@ for (let i = 0; i < contents.length; i++) {
             compiledContents += `tape[pointer]++;
             
             `;
-            compiledContents += `if (pointer >= TAPE_SIZE) pointer = 0;
-
-            `;
             break;
         case '-':
             compiledContents += `tape[pointer]--;
 
             `;
-            compiledContents += `if (pointer >= TAPE_SIZE) pointer = -1;
-
-            `;
             break;
         case '>':
-            compiledContents += `pointer++;
+            compiledContents += `pointer = (pointer + 1) % TAPE_SIZE;
 
             `;
             break;
         case '<':
-            compiledContents += `pointer--;
+            compiledContents += `pointer = (pointer - 1 + TAPE_SIZE) % TAPE_SIZE;
 
             `;
             break;
@@ -77,17 +72,12 @@ for (let i = 0; i < contents.length; i++) {
             `;
             break;
         case ',':
-            compiledContents += `tape[pointer] = process.stdin.read();
-
-            `;
-            compiledContents += `if (tape[pointer] !== null) {
-
-            `;
-            compiledContents += `   tape[pointer] = tape[pointer].charCodeAt(0);
-
-            `;
-            compiledContents += `}
-
+            compiledContents += `{
+                const buffer = Buffer.alloc(1);
+                require('fs').readSync(0, buffer, 0, 1, null);
+                tape[pointer] = buffer[0];
+            }
+            
             `;
             break;
         case '[':
@@ -107,7 +97,7 @@ for (let i = 0; i < contents.length; i++) {
 
 // Get the file name without the extension
 
-const fileName = file.split('.')[0];
+const fileName = path.parse(file).name;
 
 // Write the compiled contents to a file named <fileName>.js
 
