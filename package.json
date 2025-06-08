@@ -1,6 +1,6 @@
 {
   "name": "braintsck",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Brainfuck to JavaScript compiler in TypeScript",
   "keywords": [
     "typescript",
