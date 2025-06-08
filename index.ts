@@ -19,7 +19,7 @@ import * as path from 'path';
 // If it doesn't, exit with an error
 
 if (process.argv[2] == undefined) {
-    console.log("Usage: node . <file> , or if you're using the global package, brainTSck <file>");
+    console.log("Usage: node . <file> , or if you're using the global package, braintsck <file>");
     process.exit(1);
 }
 
