@@ -27,33 +27,33 @@ for (var i = 0; i < contents.length; i++) {
     var char = contents.charAt(i);
     switch (char) {
         case '+':
-            compiledContents += "tape[pointer]++;";
-            compiledContents += "if (pointer >= TAPE_SIZE) pointer = 0;";
+            compiledContents += "tape[pointer]++;\n            \n            ";
+            compiledContents += "if (pointer >= TAPE_SIZE) pointer = 0;\n\n            ";
             break;
         case '-':
-            compiledContents += "tape[pointer]--;";
-            compiledContents += "if (pointer >= TAPE_SIZE) pointer = -1;";
+            compiledContents += "tape[pointer]--;\n\n            ";
+            compiledContents += "if (pointer >= TAPE_SIZE) pointer = -1;\n\n            ";
             break;
         case '>':
-            compiledContents += "pointer++;";
+            compiledContents += "pointer++;\n\n            ";
             break;
         case '<':
-            compiledContents += "pointer--;";
+            compiledContents += "pointer--;\n\n            ";
             break;
         case '.':
-            compiledContents += "process.stdout.write(String.fromCharCode(tape[pointer]));";
+            compiledContents += "process.stdout.write(String.fromCharCode(tape[pointer]));\n\n            ";
             break;
         case ',':
-            compiledContents += "tape[pointer] = process.stdin.read();";
-            compiledContents += "if (tape[pointer] !== null) {";
-            compiledContents += "   tape[pointer] = tape[pointer].charCodeAt(0);";
-            compiledContents += "}";
+            compiledContents += "tape[pointer] = process.stdin.read();\n\n            ";
+            compiledContents += "if (tape[pointer] !== null) {\n\n            ";
+            compiledContents += "   tape[pointer] = tape[pointer].charCodeAt(0);\n\n            ";
+            compiledContents += "}\n\n            ";
             break;
         case '[':
-            compiledContents += "while (tape[pointer] != 0) {";
+            compiledContents += "while (tape[pointer] != 0) {\n\n            ";
             break;
         case ']':
-            compiledContents += "}";
+            compiledContents += "}\n\n            ";
             break;
         default:
             break;
