@@ -44,7 +44,7 @@ braintsck index.bf
 
 ## Why use this
 
-Brainfuck is the absolute best programming language in programming history, with its 8 commands, it can do absolutely anything you wish.
+You can write node.js programs in brainfuck.
 
 ## License
 
