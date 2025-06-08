@@ -30,7 +30,6 @@
     "braintsck": "dist/index.js"
   },
   "dependencies": {
-    "tsc": "^2.0.4"
   },
   "devDependencies": {
     "@types/node": "^22.15.30",
