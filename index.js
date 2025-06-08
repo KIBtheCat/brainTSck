@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 // -- START HEADER --
 Object.defineProperty(exports, "__esModule", { value: true });
