@@ -10,6 +10,10 @@ Install with npm:
 ```bash
 npm install -g brainTSck
 ```
+You can also install like this:
+```bash
+npm install -g .
+```
 
 ## Usage
 
