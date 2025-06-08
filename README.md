@@ -1,5 +1,7 @@
 # brainTSck
 
+[![node.js package](https://img.shields.io/badge/node.js-package-green.svg?style=for-the-badge)](https://www.npmjs.com/package/braintsck)
+
 Brainfuck to JavaScript compiler in TypeScript
 
 With this package, you can write node.js programs in brainfuck, the absolute best programming language!
