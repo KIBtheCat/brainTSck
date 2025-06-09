@@ -24,7 +24,7 @@
   "scripts": {
     "test": "echo \"No tests yet\"",
     "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "postbuild": "node src/postbuild.js"
   },
   "bin": {
     "braintsck": "dist/index.js"
